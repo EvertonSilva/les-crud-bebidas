@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  database:
+    image: 'postgres:9.5'
+    container_name: crud_bebidas_db
+    volumes:
+      - /home/everton/tmp/postgres/data:/var/lib/postgresql/data
+    networks:
+      - app
+
+  web:
+    build: .
+    image: everton/rails:les
+    container_name: crud_bebidas
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/var/www/crud_bebidas
+    ports:
+      - "127.0.0.1:3000:3000"
+    depends_on:
+      - database
+    networks:
+      - app
+
+networks:
+  app:
