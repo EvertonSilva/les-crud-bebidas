@@ -16,9 +16,20 @@ class CategoriesController < ApplicationController
   end
 
   def create
+    @cat = Category.new(cat_params)
+    if @cat.save
+      redirect_to @cat
+    else
+      render :new
+    end
   end
 
   def update
+    if @cat.update_attributes(cat_params)
+      redirect_to @cat
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -27,5 +38,9 @@ class CategoriesController < ApplicationController
   private
   def find_category
     @cat = Category.find(params[:id])
+  end
+
+  def cat_params
+    params.require(:category).permit(:name, :desc)
   end
 end
