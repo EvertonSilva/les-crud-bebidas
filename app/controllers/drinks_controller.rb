@@ -33,6 +33,8 @@ class DrinksController < ApplicationController
   end
 
   def destroy
+    @drink.destroy
+    redirect_to action: "index"
   end
 
   private
