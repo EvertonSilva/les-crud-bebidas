@@ -1,2 +1,9 @@
-<h1>Drinks#index</h1>
-<p>Find me in app/views/drinks/index.html.erb</p>
+<h1>Listing Drinks</h1>
+<div>
+  <ul>
+    <%= render @drinks %>
+  </ul>
+</div>
+<div>
+  <%= link_to "New drink", new_drink_path %>
+</div>
