@@ -8,12 +8,20 @@ class DrinksController < ApplicationController
   end
 
   def new
+    @drink = Drink.new
   end
 
   def edit
+    @drink = Drink.find(params[:id])
   end
 
-  def crate
+  def create
+    @drink = Drink.new(drink_params)
+    if @drink.save
+      redirect_to @drink
+    else
+      render :new
+    end
   end
 
   def update
@@ -24,6 +32,6 @@ class DrinksController < ApplicationController
 
   private
   def drink_params
-    # make strong params here
+    params.require(:drink).permit(:name, :expiration_date, :manufacture_date, :alcoholic_content)
   end
 end

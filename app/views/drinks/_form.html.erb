@@ -1,0 +1,19 @@
+<%= form_for @drink do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :alcoholic_content %>
+    <%= f.number_field :alcoholic_content %>
+  </div>
+  <div>
+    <%= f.label :expiration_date %>
+    <%= f.date_field :expiration_date %>
+  </div>
+  <div>
+    <%= f.label :manufacture_date %>
+    <%= f.date_field :manufacture_date %>
+  </div>
+  <%= f.submit %>
+<% end %>

@@ -1,2 +1,15 @@
-<h1>Drinks#show</h1>
-<p>Find me in app/views/drinks/show.html.erb</p>
+<h1><%= @drink.name %></h1>
+<div>
+  <p>
+    <%= t("Alcoholic Content") %>:
+    <%= @drink.alcoholic_content %>
+  </p>
+  <p>
+    <%= t("Expiration Date") %>:
+    <%= @drink.expiration_date %>
+  </p>
+  <p>
+    <%= t("Manufacture Date") %>:
+    <%= @drink.manufacture_date %>
+  </p>
+</div>
