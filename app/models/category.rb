@@ -5,7 +5,7 @@
 #   name:String
 #   desc:String
 class Category < ApplicationRecord
-  validates :name, presence: true
+  validates :name, :max_permanency_period, presence: true
 
   has_many :drinks
 end

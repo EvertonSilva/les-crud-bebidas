@@ -7,5 +7,10 @@
     <%= f.label :desc %>
     <%= f.text_area :desc %>
   </div>
+  <div>
+    <%= f.label :max_permanency_period %>
+    <%= f.number_field :max_permanency_period %>
+    <span>months</span>
+  </div>
   <%= f.submit %>
 <% end %>

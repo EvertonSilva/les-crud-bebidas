@@ -43,6 +43,6 @@ class CategoriesController < ApplicationController
   end
 
   def cat_params
-    params.require(:category).permit(:name, :desc)
+    params.require(:category).permit(:name, :desc, :max_permanency_period)
   end
 end
