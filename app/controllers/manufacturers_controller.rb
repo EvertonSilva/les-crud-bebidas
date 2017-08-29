@@ -34,7 +34,7 @@ class ManufacturersController < ApplicationController
 
   def destroy
   	@manufac.destroy
-  	redirect_to action: "index"
+    redirect_to manufacturers_path
   end
 
   private
