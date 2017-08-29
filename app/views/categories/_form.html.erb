@@ -1,0 +1,11 @@
+<%= form_for @cat do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :desc %>
+    <%= f.text_area :desc %>
+  </div>
+  <%= f.submit %>
+<% end %>

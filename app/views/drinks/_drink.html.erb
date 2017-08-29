@@ -1,0 +1,6 @@
+<li>
+  <%= drink.name %>
+  <%= link_to 'View', drink %>
+  <%= link_to 'Edit', edit_drink_path(drink) %>
+  <%= link_to 'Delete', drink, method: :delete, data: { confirm: "You sure?" } %>
+</li>
