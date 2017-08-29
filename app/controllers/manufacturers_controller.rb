@@ -2,6 +2,7 @@ class ManufacturersController < ApplicationController
   before_action :find_manufac, only: [:show, :edit, :update, :destroy]
 
   def index
+  	@manufacs = Manufacturer.all
   end
 
   def show
