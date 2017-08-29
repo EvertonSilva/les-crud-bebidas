@@ -24,6 +24,13 @@ class SuppliersController < ApplicationController
     end
   end
 
+  def update
+    if @supplier.update_attributes(supplier_params)
+      redirect_to @supplier
+    else
+      render :edit
+    end
+  end
 
   private
   def find_supplier
