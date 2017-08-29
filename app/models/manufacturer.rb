@@ -5,5 +5,5 @@
 #   name:String
 #   cnpj:String
 class Manufacturer < ApplicationRecord
-	validates :name, :cnpj, presence: true
+	validates :name, :cnpj, :phone, presence: true
 end
