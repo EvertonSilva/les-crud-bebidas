@@ -25,6 +25,11 @@ class ManufacturersController < ApplicationController
   end
 
   def update
+  	if @manufac.update_attributes(manufac_params)
+  		redirect_to @manufac
+  	else
+  		render :edit
+  	end
   end
 
   def destroy
