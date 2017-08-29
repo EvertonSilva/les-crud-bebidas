@@ -1,0 +1,11 @@
+<%= form_for @manufac do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :cnpj %>
+    <%= f.text_field :cnpj %>
+  </div>
+  <%= f.submit %>
+<% end %>
