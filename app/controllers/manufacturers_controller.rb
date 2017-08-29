@@ -43,6 +43,6 @@ class ManufacturersController < ApplicationController
   end
 
   def manufac_params
-  	params.require(:manufacturer).permit(:name, :cnpj, :phone)
+  	params.require(:manufacturer).permit(:name, :cnpj, :phone, :email)
   end
 end
