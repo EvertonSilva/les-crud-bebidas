@@ -10,9 +10,11 @@ class DrinksController < ApplicationController
 
   def new
     @drink = Drink.new
+    @categories = Category.all
   end
 
   def edit
+    @categories = Category.all
   end
 
   def create
@@ -43,6 +45,7 @@ class DrinksController < ApplicationController
   end
 
   def drink_params
-    params.require(:drink).permit(:name, :expiration_date, :manufacture_date, :alcoholic_content)
+    params.require(:drink).permit(:name, :expiration_date,
+                                  :manufacture_date, :alcoholic_content, :category_id)
   end
 end

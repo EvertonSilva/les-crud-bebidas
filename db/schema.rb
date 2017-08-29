@@ -15,6 +15,14 @@ ActiveRecord::Schema.define(version: 20170829145050) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "max_permanency_date"
+  end
+
   create_table "drinks", force: :cascade do |t|
     t.string "name"
     t.datetime "expiration_date"
@@ -22,6 +30,9 @@ ActiveRecord::Schema.define(version: 20170829145050) do
     t.integer "alcoholic_content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "category_id"
+    t.index ["category_id", "created_at"], name: "index_drinks_on_category_id_and_created_at"
+    t.index ["category_id"], name: "index_drinks_on_category_id"
   end
 
   create_table "manufacturers", force: :cascade do |t|
@@ -33,4 +44,14 @@ ActiveRecord::Schema.define(version: 20170829145050) do
     t.string "email"
   end
 
+  create_table "suppliers", force: :cascade do |t|
+    t.string "name"
+    t.string "registry"
+    t.string "phone"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "drinks", "categories"
 end
