@@ -34,7 +34,7 @@ class ManufacturersController < ApplicationController
 
   def destroy
   	@manufac.destroy
-  	redirect_to action: "index"
+    redirect_to manufacturers_path
   end
 
   private
@@ -43,6 +43,6 @@ class ManufacturersController < ApplicationController
   end
 
   def manufac_params
-  	params.require(:manufacturer).permit(:name, :cnpj, :phone, :email)
+  	params.require(:manufacturer).permit(:name, :registry, :phone, :email)
   end
 end

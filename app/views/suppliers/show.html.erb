@@ -1,2 +1,15 @@
-<h1>Suppliers#show</h1>
-<p>Find me in app/views/suppliers/show.html.erb</p>
+<h1><%= @supplier.name %></h1>
+<div>
+  <p>
+    <%= t("Registry") %>:
+    <%= @supplier.registry %>
+  </p>
+  <p>
+    <%= t("Phone") %>:
+    <%= @supplier.phone %>
+  </p>
+  <p>
+    <%= t("Email") %>:
+    <%= @supplier.email %>
+  </p>
+</div>
