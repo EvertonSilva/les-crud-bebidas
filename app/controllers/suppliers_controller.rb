@@ -32,6 +32,11 @@ class SuppliersController < ApplicationController
     end
   end
 
+  def destroy
+    @supplier.destroy
+    redirect_to suppliers_path
+  end
+
   private
   def find_supplier
     @supplier = Supplier.find(params[:id])
