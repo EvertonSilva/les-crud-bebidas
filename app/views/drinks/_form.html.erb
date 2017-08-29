@@ -8,12 +8,16 @@
     <%= f.number_field :alcoholic_content %>
   </div>
   <div>
+    <%= f.label :manufacture_date %>
+    <%= f.date_field :manufacture_date %>
+  </div>
+  <div>
     <%= f.label :expiration_date %>
     <%= f.date_field :expiration_date %>
   </div>
   <div>
-    <%= f.label :manufacture_date %>
-    <%= f.date_field :manufacture_date %>
+    <%= f.label :category_id %>
+    <%= f.collection_select(:category_id, @categories, :id, :name) %>
   </div>
   <%= f.submit %>
 <% end %>
