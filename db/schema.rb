@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20170830012059) do
     t.string "desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "max_permanency_period"
+    t.datetime "max_permanency_date"
   end
 
   create_table "drinks", force: :cascade do |t|
