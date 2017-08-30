@@ -1,0 +1,6 @@
+<li>
+  <%= supplier.name %>
+  <%= link_to 'View', supplier %>
+  <%= link_to 'Edit', edit_supplier_path(supplier) %>
+  <%= link_to 'Delete', supplier, method: :delete, data: { confirm: "You sure?" } %>
+</li>

@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 20170829013154) do
     t.index ["category_id"], name: "index_drinks_on_category_id"
   end
 
+  create_table "manufacturers", force: :cascade do |t|
+    t.string "name"
+    t.string "registry"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "phone"
+    t.string "email"
+  end
+
   create_table "suppliers", force: :cascade do |t|
     t.string "name"
     t.string "registry"

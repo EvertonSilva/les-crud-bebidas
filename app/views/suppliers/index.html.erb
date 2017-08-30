@@ -1,2 +1,9 @@
-<h1>Suppliers#index</h1>
-<p>Find me in app/views/suppliers/index.html.erb</p>
+<h1>Listing Drinks</h1>
+<div>
+  <ul>
+    <%= render @suppliers %>
+  </ul>
+</div>
+<div>
+  <%= link_to "New supplier", new_supplier_path %>
+</div>
