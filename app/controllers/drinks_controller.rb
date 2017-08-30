@@ -41,6 +41,8 @@ class DrinksController < ApplicationController
     @drinks = Drink.where(nil)
     @drinks = @drinks.from_category(params[:category]) if params[:category].present?
     @drinks = @drinks.from_supplier(params[:supplier]) if params[:supplier].present?
+    @drinks = @drinks.from_price_min(params[:price_min]) if params[:price_min].present? and params[:price_max].present?
+    @drinks = @drinks.from_price_max(params[:price_max]) if params[:price_max].present? and params[:price_min].present?
     render :index
   end
 

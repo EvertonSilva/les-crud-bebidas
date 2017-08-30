@@ -12,6 +12,18 @@
         <%= text_field_tag(:supplier) %>
       </label>
     </div>
+    <div>
+      <label>
+        <span>Min. Price:</span>
+        <%= text_field_tag(:price_min) %>
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Max. Price:</span>
+        <%= text_field_tag(:price_max) %>
+      </label>
+    </div>
     <%= submit_tag("Search") %>
   <% end %>
 </div>

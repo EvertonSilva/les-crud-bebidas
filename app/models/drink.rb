@@ -26,6 +26,12 @@ class Drink < ApplicationRecord
         ->(category) { where "category_id = ?",
                         Category.where("lower(name) like ?", "%#{category.downcase}%")[0].id }
 
+  scope :from_price_min,
+        ->(price_min) { where "price >= ?", price_min }
+
+  scope :from_price_max,
+        ->(price_max) { where "price <= ?", price_max }        
+
   private
     def check_experiation_date
       # return false if any other validations fails
