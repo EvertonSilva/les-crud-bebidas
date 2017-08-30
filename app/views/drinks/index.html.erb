@@ -1,5 +1,22 @@
 <h1>Listing Drinks</h1>
 <div>
+  <%= form_tag("/search", method: :get) do %>
+    <div>
+      <label>
+        <span>Supplier:</span>
+        <%= text_field_tag(:supplier) %>
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Category:</span>
+        <%= text_field_tag(:category) %>
+      </label>
+    </div>
+    <%= submit_tag("search") %>
+  <% end %>
+</div>
+<div>
   <ul>
     <%= render @drinks %>
   </ul>

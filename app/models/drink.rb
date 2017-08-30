@@ -13,6 +13,14 @@ class Drink < ApplicationRecord
   validates :name, :expiration_date, :manufacture_date, :alcoholic_content, presence: true
   validate :check_experiation_date
 
+  scope :from_supplier,
+        ->(supplier) { where "supplier_id = ?",
+                        Supplier.where("lower(name) like ?", "%#{supplier.downcase}%")[0].id }
+
+  scope :from_category,
+        ->(category) { where "category_id = ?",
+                        Category.where("lower(name) like ?", "%#{category.downcase}%")[0].id }
+
   private
     def check_experiation_date
       # return false if any other validations fails

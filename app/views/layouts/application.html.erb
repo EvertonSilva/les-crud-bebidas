@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to "Drinks", drinks_path %>
+      <%= link_to "Categories", categories_path %>
+      <%= link_to "Suppliers", suppliers_path %>
+    </nav>
     <%= yield %>
   </body>
 </html>

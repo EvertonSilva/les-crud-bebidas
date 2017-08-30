@@ -10,13 +10,9 @@ class DrinksController < ApplicationController
 
   def new
     @drink = Drink.new
-    @categories = Category.all
-    @suppliers = Supplier.all
   end
 
   def edit
-    @categories = Category.all
-    @suppliers = Supplier.all
   end
 
   def create
@@ -32,13 +28,20 @@ class DrinksController < ApplicationController
     if @drink.update_attributes(drink_params)
       redirect_to @drink
     else
-      render :new
+      render :edit
     end
   end
 
   def destroy
     @drink.destroy
     redirect_to drinks_path
+  end
+
+  def search
+    @drinks = Drink.where(nil)
+    @drinks = @drinks.from_supplier(params[:supplier]) if params[:supplier].present?
+    @drinks = @drinks.from_category(params[:category]) if params[:category].present?
+    render :index
   end
 
   private
