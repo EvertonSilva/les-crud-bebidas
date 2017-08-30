@@ -5,7 +5,7 @@
   </div>
   <div>
     <%= f.label :alcoholic_content %>
-    <%= f.number_field :alcoholic_content %>
+    <%= f.number_field :alcoholic_content, placeholder: '%' %>
   </div>
   <div>
     <%= f.label :manufacture_date %>
@@ -18,6 +18,10 @@
   <div>
     <%= f.label :category_id %>
     <%= f.collection_select(:category_id, Category.all, :id, :name) %>
+  </div>
+  <div>
+    <%= f.label :manufacturer_id %>
+    <%= f.collection_select(:manufacturer_id, Manufacturer.all, :id, :name) %>
   </div>
   <div>
     <%= f.label :supplier_id %>

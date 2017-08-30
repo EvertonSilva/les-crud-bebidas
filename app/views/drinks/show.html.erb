@@ -1,10 +1,13 @@
 <h1><%= @drink.name %></h1>
-<h2>Category: <%= @drink.category.name %></h2>
-<h2>Supplier: <%= @drink.supplier.name %></h2>
 <div>
+  <p>Category: <%= @drink.category.name %></p>
+  <p>Manufacturer: <%= @drink.manufacturer.name %></p>
+  <p>Supplier: <%= @drink.supplier.name %></p>
+  <hr/>
   <p>
     <%= t("Alcoholic Content") %>:
     <%= @drink.alcoholic_content %>
+    <span>%</span>
   </p>
   <p>
     <%= t("Expiration Date") %>:

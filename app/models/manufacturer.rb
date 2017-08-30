@@ -3,7 +3,11 @@
 # table name: manufacturers
 # fields:type
 #   name:String
-#   cnpj:String
+#   registry:String
+#   phone:String
+#   email:String
 class Manufacturer < ApplicationRecord
 	validates :name, :registry, :phone, :email, presence: true
+
+	has_many :drinks
 end

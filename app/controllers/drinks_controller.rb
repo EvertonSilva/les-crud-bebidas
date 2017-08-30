@@ -39,8 +39,8 @@ class DrinksController < ApplicationController
 
   def search
     @drinks = Drink.where(nil)
-    @drinks = @drinks.from_supplier(params[:supplier]) if params[:supplier].present?
     @drinks = @drinks.from_category(params[:category]) if params[:category].present?
+    @drinks = @drinks.from_supplier(params[:supplier]) if params[:supplier].present?
     render :index
   end
 
@@ -51,6 +51,6 @@ class DrinksController < ApplicationController
 
   def drink_params
     params.require(:drink).permit(:name, :expiration_date, :manufacture_date,
-                              :alcoholic_content, :category_id, :supplier_id)
+                              :alcoholic_content, :category_id, :manufacturer_id, :supplier_id)
   end
 end

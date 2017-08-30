@@ -3,14 +3,14 @@
   <%= form_tag("/search", method: :get) do %>
     <div>
       <label>
-        <span>Supplier:</span>
-        <%= text_field_tag(:supplier) %>
+        <span>Category:</span>
+        <%= text_field_tag(:category) %>
       </label>
     </div>
     <div>
       <label>
-        <span>Category:</span>
-        <%= text_field_tag(:category) %>
+        <span>Supplier:</span>
+        <%= text_field_tag(:supplier) %>
       </label>
     </div>
     <%= submit_tag("search") %>

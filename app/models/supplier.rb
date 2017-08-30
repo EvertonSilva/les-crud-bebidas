@@ -9,5 +9,5 @@
 class Supplier < ApplicationRecord
 	validates :name, :registry, :phone, :email, presence: true
 
-  has_many :drinks
+	has_many :drinks
 end
