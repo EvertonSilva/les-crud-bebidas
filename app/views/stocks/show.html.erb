@@ -1,7 +1,15 @@
-<h1><%= @stock.ammount %></h1>
+<h1><%= @stock.drink.name %></h1>
 <div>
   <p>
     <%= t("Ammount") %>:
     <%= @stock.ammount %>
+  </p>
+  <p>
+    <%= t("Unit Price") %>:
+    <%= @stock.drink.price %>
+  </p>
+  <p>
+    <%= t("Total Value") %>:
+    <%= @stock.drink.price * @stock.ammount %>
   </p>
 </div>

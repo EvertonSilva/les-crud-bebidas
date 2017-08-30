@@ -10,7 +10,9 @@ class Drink < ApplicationRecord
   belongs_to :category
   belongs_to :manufacturer
   belongs_to :supplier
-  
+
+  has_one :stock
+
   validates_associated :category, :supplier
   validates :name, :expiration_date, :manufacture_date, :min_inventory, :max_inventory,
           :alcoholic_content, :price, presence: true

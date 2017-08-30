@@ -4,5 +4,7 @@
 # fields:type
 #   ammount:int
 class Stock < ApplicationRecord
+	belongs_to :drink
+
 	validates :ammount, presence: true
 end

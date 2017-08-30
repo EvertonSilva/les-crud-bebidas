@@ -1,5 +1,9 @@
 <%= form_for @stock do |f| %>
   <div>
+    <%= f.label :drink_id %>
+    <%= f.collection_select(:drink_id, Drink.all, :id, :name) %>
+  </div>
+  <div>
     <%= f.label :ammount %>
     <%= f.number_field :ammount %>
   </div>
