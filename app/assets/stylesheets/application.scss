@@ -5,6 +5,25 @@
 .container {
   @include grid-container;
   margin: 0 auto;
-  padding: 5%;
+  padding: 3%;
   width: 90%;
+}
+
+#nav a{
+	padding: 0 2%;
+}
+
+#search{
+	margin-bottom: 5%;
+}
+
+#content div > a{
+	display: inline-block;
+	margin-top: 10px;
+	padding: 10px;
+	background-color: #1565c0;
+	color: #FFF;
+	border-radius: 3px;
+	text-decoration: none;
+	font-weight: 600;
 }
