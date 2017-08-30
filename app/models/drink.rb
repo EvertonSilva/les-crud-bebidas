@@ -34,7 +34,7 @@ class Drink < ApplicationRecord
       max_period = self.category.max_permanency_period
 
       if self.expiration_date > (self.manufacture_date.to_datetime >> max_period)
-        self.errors[:expiration_date] << I18n.t("Date can be above #{max_period} months from #{manufacture_date.to_s}")
+        self.errors[:expiration_date] << I18n.t("Date must be above #{max_period} months from #{manufacture_date.to_s}")
       end
     end
 
