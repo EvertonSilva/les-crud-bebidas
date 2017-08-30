@@ -1,14 +1,18 @@
 <h1><%= @drink.name %></h1>
 <div>
-  <p>Category: <%= @drink.category.name %></p>
-  <p>Manufacturer: <%= @drink.manufacturer.name %></p>
-  <p>Supplier: <%= @drink.supplier.name %></p>
-  <hr/>
   <p>
-    <%= t("Alcoholic Content") %>:
-    <%= @drink.alcoholic_content %>
-    <span>%</span>
+    <%= t("Category") %>:
+    <%= @drink.category.name %>
   </p>
+  <p>
+    <%= t("Manufacturer") %>:
+    <%= @drink.manufacturer.name %>
+  </p>
+  <p>
+    <%= t("Supplier") %>:
+    <%= @drink.supplier.name %>
+  </p>
+  <hr/>
   <p>
     <%= t("Expiration Date") %>:
     <%= @drink.expiration_date %>
@@ -16,5 +20,18 @@
   <p>
     <%= t("Manufacture Date") %>:
     <%= @drink.manufacture_date %>
+  </p>
+  <p>
+    <%= t("Alcoholic Content") %>:
+    <%= @drink.alcoholic_content %>
+    <span>%</span>
+  </p>
+  <p>
+    <%= t("Min Inventory") %>:
+    <%= @drink.min_inventory %>
+  </p>
+  <p>
+    <%= t("Max Inventory") %>:
+    <%= @drink.max_inventory %>
   </p>
 </div>

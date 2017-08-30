@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170830125929) do
+ActiveRecord::Schema.define(version: 20170830131711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20170830125929) do
     t.bigint "category_id"
     t.bigint "supplier_id"
     t.bigint "manufacturer_id"
+    t.integer "max_inventory"
+    t.integer "min_inventory"
     t.index ["category_id", "created_at"], name: "index_drinks_on_category_id_and_created_at"
     t.index ["category_id"], name: "index_drinks_on_category_id"
     t.index ["manufacturer_id", "created_at"], name: "index_drinks_on_manufacturer_id_and_created_at"

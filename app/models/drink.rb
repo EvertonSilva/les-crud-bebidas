@@ -12,7 +12,8 @@ class Drink < ApplicationRecord
   belongs_to :supplier
   
   validates_associated :category, :supplier
-  validates :name, :expiration_date, :manufacture_date, :alcoholic_content, presence: true
+  validates :name, :expiration_date, :manufacture_date, :min_inventory, :max_inventory,
+          :alcoholic_content, presence: true
   validate :check_experiation_date
 
   scope :from_supplier,

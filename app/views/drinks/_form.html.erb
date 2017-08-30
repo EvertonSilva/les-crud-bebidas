@@ -4,16 +4,24 @@
     <%= f.text_field :name %>
   </div>
   <div>
-    <%= f.label :alcoholic_content %>
-    <%= f.number_field :alcoholic_content, placeholder: '%' %>
-  </div>
-  <div>
     <%= f.label :manufacture_date %>
     <%= f.date_field :manufacture_date %>
   </div>
   <div>
     <%= f.label :expiration_date %>
     <%= f.date_field :expiration_date %>
+  </div>
+  <div>
+    <%= f.label :alcoholic_content %>
+    <%= f.number_field :alcoholic_content, placeholder: '%' %>
+  </div>
+  <div>
+    <%= f.label :min_inventory %>
+    <%= f.number_field :min_inventory %>
+  </div>
+  <div>
+    <%= f.label :max_inventory %>
+    <%= f.number_field :max_inventory %>
   </div>
   <div>
     <%= f.label :category_id %>
