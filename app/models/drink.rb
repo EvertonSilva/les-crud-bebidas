@@ -8,6 +8,7 @@
 #   alcoholic_content:Integer
 class Drink < ApplicationRecord
   belongs_to :category
+  belongs_to :supplier
   validates :name, :expiration_date, :manufacture_date, :alcoholic_content, presence: true
   validate :check_experiation_date
 
