@@ -13,7 +13,7 @@ class Drink < ApplicationRecord
   
   validates_associated :category, :supplier
   validates :name, :expiration_date, :manufacture_date, :min_inventory, :max_inventory,
-          :alcoholic_content, presence: true
+          :alcoholic_content, :price, presence: true
   validate :check_experiation_date
 
   scope :from_supplier,

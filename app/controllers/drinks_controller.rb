@@ -51,7 +51,7 @@ class DrinksController < ApplicationController
 
   def drink_params
     params.require(:drink).permit(:name, :expiration_date, :manufacture_date,
-                              :min_inventory, :max_inventory, :alcoholic_content, 
+                              :min_inventory, :max_inventory, :alcoholic_content, :price, 
                               :category_id, :manufacturer_id, :supplier_id)
   end
 end
