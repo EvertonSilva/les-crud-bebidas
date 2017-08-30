@@ -1,0 +1,10 @@
+@import "bourbon";
+@import "neat";
+@import "base/base";
+
+.container {
+  @include grid-container;
+  margin: 0 auto;
+  padding: 5%;
+  width: 90%;
+}

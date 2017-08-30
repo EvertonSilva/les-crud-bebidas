@@ -10,10 +10,12 @@
 
   <body>
     <nav>
-      <%= link_to "Drinks", drinks_path %>
-      <%= link_to "Categories", categories_path %>
-      <%= link_to "Suppliers", suppliers_path %>
+      <div class="container">
+        <%= link_to "Drinks", drinks_path %>
+        <%= link_to "Categories", categories_path %>
+        <%= link_to "Suppliers", suppliers_path %>
+      </div>
     </nav>
-    <%= yield %>
+    <div class="container"><%= yield %></div>
   </body>
 </html>
