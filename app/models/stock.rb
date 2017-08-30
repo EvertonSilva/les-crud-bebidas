@@ -6,5 +6,5 @@
 class Stock < ApplicationRecord
 	belongs_to :drink
 
-	validates :ammount, presence: true
+	validates :amount, presence: true
 end

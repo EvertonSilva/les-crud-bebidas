@@ -43,6 +43,6 @@ class StocksController < ApplicationController
   end
 
   def stock_params
-  	params.require(:stock).permit(:drink_id, :ammount)
+  	params.require(:stock).permit(:drink_id, :amount)
   end
 end

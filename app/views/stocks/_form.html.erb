@@ -4,8 +4,8 @@
     <%= f.collection_select(:drink_id, Drink.all, :id, :name) %>
   </div>
   <div>
-    <%= f.label :ammount %>
-    <%= f.number_field :ammount %>
+    <%= f.label :amount %>
+    <%= f.number_field :amount %>
   </div>
   <%= f.submit %>
 <% end %>
